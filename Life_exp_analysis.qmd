@@ -13,11 +13,17 @@ library(tidyverse)
 
 ---
 
+## Absract
+
+Here, I re-examine the analysis of Oeppen and Vaupel (2002).
+
 ## Life Expectancy Analysis
 
 Here, I re-examine the analysis of Oeppen and Vaupel (2002).
 
-Use gapminder :: gapminder_unfiltered from tidyverse packages to find the maximum life expectancy for each year and country wchi had the maximum life expectancy.
+Use gapminder :: gapminder_unfiltered from tidyverse packages to find the maximum life expectancy for each year and country wich had the maximum life expectancy.
+
+Here is the code to use to organize the data for nanlysis
 
 ```{r}
 gapminder::gapminder_unfiltered |> group_by(year) |> filter(lifeExp == max(lifeExp)) |> ungroup() |> select(year, country, lifeExp) |> arrange(year) -> sumdat
